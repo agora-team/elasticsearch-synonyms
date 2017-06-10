@@ -1,5 +1,7 @@
 ![Elasticsearch Synonyms](docs/banner.png)
 
+[![Build Status][travis-img-url]][travis-href]
+
 This repository contains a curated dataset of synonyms in [Solr Format][1]. These
 synonyms can be used for [Elasticsearch Synonym Token Filter][2] configuration.
 
@@ -33,3 +35,5 @@ The datasets are used under fair use and derivative of the original sources.
 
 [1]: https://cwiki.apache.org/confluence/display/solr/Filter+Descriptions#FilterDescriptions-SynonymFilter
 [2]: https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html#analysis-synonym-tokenfilter
+[travis-img-url]: https://travis-ci.org/prashnts/elasticsearch-synonyms.svg?branch=master
+[travis-href]: https://travis-ci.org/prashnts/elasticsearch-synonyms
