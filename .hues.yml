@@ -1,0 +1,8 @@
+labels:
+  info:     '[ I ]'
+  warn:     '[ ! ]'
+  error:    '[ x ]'
+  success:  '[ ✓ ]'
+options:
+  theme: simple
+  show_time: false
