@@ -1,0 +1,27 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+file_extensions:
+  - synonyms
+scope: source.synonyms
+contexts:
+  main:
+    - match: '#'
+      scope: comment
+      push: line_comment
+
+    - match: '\b\w+\b'
+      scope: string.unquoted.plain
+
+    - match: '=>'
+      scope: punctuation.definition.block.sequence.item
+      push:
+        - match: $
+          pop: true
+        - match: '\b\w+\b'
+          scope: keyword
+
+  line_comment:
+    - meta_scope: comment.line
+    - match: $
+      pop: true
