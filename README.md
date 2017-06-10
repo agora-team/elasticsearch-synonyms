@@ -1,4 +1,4 @@
-# Elasticsearch 
+![Elasticsearch Synonyms](docs/banner.png)
 
 This repository contains a curated dataset of synonyms in [Solr Format][1]. These
 synonyms can be used for [Elasticsearch Synonym Token Filter][2] configuration.
