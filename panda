@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+_VERSION='0.1.1'
+_ME=$(basename "${0}")
+BANNER=$(cat <<HEREDOC
+
+Elasticsearch Synonyms
+
+Version: ${_VERSION}
+
+Usage:
+  ${_ME} <command> [--command-options] [<arguments>]
+  ${_ME} -h | --help
+  ${_ME} --version
+
+Options:
+  -h --help  Display this help information.
+  --version  Display version information.
+
+Help:
+  ${_ME} help [<command>]
+
+HEREDOC
+)
+
+source ./tools/pandalib.sh
+
+__sigint () {
+  printf '\n'
+  _abort 'Cancelled'
+}
+trap __sigint SIGINT
+
+#================================================
+desc 'test:pytest' <<EOF
+Usage:
+  ${_ME} test:pytest
+
+Description:
+  Run Python unit tests.
+EOF
+test:pytest () {
+  py.test ${@:-} && rc=$? || rc=$?
+  return $rc
+}
+
+#================================================
+desc 'test:dataset' <<EOF
+Usage:
+  ${_ME} test:dataset
+
+Description:
+  Validate synonym datasets
+EOF
+test:dataset () {
+  python -m synlint ./data/* && rc=$? || rc=$?
+  return $rc
+}
+
+#================================================
+desc 'test:all' <<HEREDOC
+Usage:
+  ${_ME} test:all
+
+Description:
+  Run all tests.
+HEREDOC
+test:all () {
+  local steps=('test:pytest' 'test:dataset')
+  local _lenstep=${#steps[@]}
+  local _failure=0
+  for (( i = 0; i < $_lenstep; i++ )); do
+    _info "[$(($i + 1)) / $_lenstep] Running ${steps[$i]}"
+    ${steps[$i]} || _failure=$(($_failure + 1))
+  done
+  if [ $_failure -eq 0 ]; then
+    _success 'All tests passing'
+  else
+    _abort "$_failure of $_lenstep tests failed"
+  fi
+}
+
+#================================================
+_main
