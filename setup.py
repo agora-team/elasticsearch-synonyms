@@ -5,6 +5,7 @@ import re
 import sys
 
 from os import path
+from codecs import open
 from setuptools import setup
 
 here = path.abspath(path.dirname(__file__))
