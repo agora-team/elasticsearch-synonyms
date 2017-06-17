@@ -6,7 +6,7 @@ from .parser import SynParser
 from .report import print_reports
 
 
-if __name__ == '__main__':
+def cli():
   parser = SynParser()
   cli = argparse.ArgumentParser(description='Parse and validate Solr Synonyms file.')
   cli.add_argument('file', help='Solr Synonyms file', nargs='+')

@@ -1,7 +1,7 @@
 import pytest
 
-from synlint import parser
-from synlint import exceptions
+from es_synonyms import parser
+from es_synonyms import exceptions
 
 def test_parse_empty_line():
   assert parser.empty_line(' ') is True
