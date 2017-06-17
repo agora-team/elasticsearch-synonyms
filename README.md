@@ -13,16 +13,28 @@ Additional helper tools in this repository:
 
 ## Datasets
 
+The synonym files in `data/` can be used directly in elasticsearch configuration.
+
 Following datasets are currently available:
 - `be-ae`: British English and American English Spellings. From [AVKO.org](https://to.noop.pw/2sNor7C).
 
-## Usage
+## Installation
 
-- The synonym files in `data/` can be used directly in configuration.
-- To use the linter tool, install python dependencies from `requirements.txt` and use:
+If you want to use the `synlint` tool, install the package from PIP using:
 ```shell
-python -m synlint [file names]
+pip install elasticsearch-synonym-toolkit
 ```
+
+This will install a linter tool, `es-synlint`. Use it with:
+
+```shell
+es-synlint [synonymfile]
+```
+
+## Development
+
+- Clone this repository.
+- Install package dependencies via `pip` with: `pip install -r requirements.txt`.
 - To run tests:
 ```shell
 ./panda test:all
@@ -31,7 +43,7 @@ python -m synlint [file names]
 ## License
 
 The tools and codes are licensed under MIT.
-The datasets are used under fair use and derivative of the original sources. 
+The datasets are used under fair use and are derivative of the original sources. 
 
 [1]: https://cwiki.apache.org/confluence/display/solr/Filter+Descriptions#FilterDescriptions-SynonymFilter
 [2]: https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html#analysis-synonym-tokenfilter
