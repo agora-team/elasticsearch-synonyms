@@ -52,7 +52,7 @@ Description:
   Validate synonym datasets
 EOF
 test:dataset () {
-  python -m synlint ./data/* && rc=$? || rc=$?
+  python -m es_synonyms ./data/* && rc=$? || rc=$?
   return $rc
 }
 
