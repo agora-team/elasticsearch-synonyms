@@ -1,6 +1,7 @@
 ![Elasticsearch Synonyms](docs/banner.png)
 
 [![Build Status][travis-img-url]][travis-href]
+[![PyPI Version][pypi-v-shield-url]][pypi-href]
 
 This repository contains a curated dataset of synonyms in [Solr Format][1]. These
 synonyms can be used for [Elasticsearch Synonym Token Filter][2] configuration.
@@ -49,3 +50,5 @@ The datasets are used under fair use and are derivative of the original sources.
 [2]: https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-synonym-tokenfilter.html#analysis-synonym-tokenfilter
 [travis-img-url]: https://travis-ci.org/prashnts/elasticsearch-synonyms.svg?branch=master
 [travis-href]: https://travis-ci.org/prashnts/elasticsearch-synonyms
+[pypi-href]: https://pypi.python.org/pypi/elasticsearch-synonym-toolkit
+[pypi-v-shield-url]: https://img.shields.io/pypi/v/elasticsearch-synonym-toolkit.svg
