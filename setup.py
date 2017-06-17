@@ -18,6 +18,9 @@ with open(path.join(here, 'es_synonyms', '__init__.py'), encoding='utf-8') as fp
   vtp = re.search(rex, fp.read(), re.M).groups()
   __version__ = '.'.join(vtp)
 
+install_requires = ('hues',)
+setup_requires = ('pytest-runner',)
+test_requirements = ['pytest', 'pytest-sugar']
 
 if sys.argv[-1] == 'publish':
     try:
@@ -43,12 +46,15 @@ setup(
   long_description=long_description,
   author='Prashant Sinha',
   author_email='prashant+git@noop.pw',
-  url='https://github.com/prashnts/dj-elasticsearch-flex',
+  url='https://github.com/prashnts/elasticsearch-synonyms',
+  download_url='https://github.com/prashnts/elasticsearch-synonym/tarball/' + __version__,
   packages=[
     'es_synonyms',
   ],
   include_package_data=True,
-  install_requires=['hues'],
+  install_requires=install_requires,
+  setup_requires=setup_requires,
+  tests_require=test_requirements,
   entry_points={
     'console_scripts': ['es-synlint=es_synonyms.synlint:cli'],
   },

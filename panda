@@ -44,6 +44,19 @@ test:pytest () {
 }
 
 #================================================
+desc 'test:install' <<EOF
+Usage:
+  ${_ME} test:install
+
+Description:
+  Run PIP install.
+EOF
+test:install () {
+  python setup.py -q develop ${@:-} && rc=$? || rc=$?
+  return $rc
+}
+
+#================================================
 desc 'test:dataset' <<EOF
 Usage:
   ${_ME} test:dataset
@@ -65,7 +78,7 @@ Description:
   Run all tests.
 HEREDOC
 test:all () {
-  local steps=('test:pytest' 'test:dataset')
+  local steps=('test:pytest' 'test:dataset' 'test:install')
   local _lenstep=${#steps[@]}
   local _failure=0
   for (( i = 0; i < $_lenstep; i++ )); do
