@@ -13,7 +13,7 @@ def load_synonyms(path):
     try:
       with open(path, encoding='utf-8') as fp:
         content = fp.read()
-    except OSError:
+    except (OSError, IOError):
       raise TypeError('Invalid Path: "{0}". Ensure it is either a URL or Correct FS Path.'.format(path))
 
   return SynParser.get_mapping(content)
