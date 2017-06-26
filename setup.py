@@ -19,7 +19,7 @@ with open(path.join(here, 'es_synonyms', '__init__.py'), encoding='utf-8') as fp
   vtp = re.search(rex, fp.read(), re.M).groups()
   __version__ = '.'.join(vtp)
 
-install_requires = ('hues',)
+install_requires = ('hues', 'requests',)
 setup_requires = ('pytest-runner',)
 test_requirements = ['pytest', 'pytest-sugar']
 
