@@ -5,4 +5,5 @@ LEVELS = dict(
 
 OPERATORS = dict(
   map='=>',
-  delimiter=',')
+  delimiter=',',
+  comment='#')
