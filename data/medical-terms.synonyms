@@ -18,7 +18,7 @@ neurology, neurologist
 oncology, oncologist
 opthalmology, opthalmologist
 orthodontics, orthodontologist
-paediatrics, paediatrician
+paediatrics, paediatrician, pediatrics, pediatrician
 pathology, pathologist
 psychiatry, psychiatrist
 psychology, psychologist
@@ -26,9 +26,9 @@ pulmonology, pulmonologist
 radiology, radiologist
 
 # Common abbreviations and expansions
-gynae => gynecologist
+gynae => gynecology
 paeds => paediatrics
-psych => psychiatrist
+psych => psychiatry
 
 # Subspecialty are treated equally
 dentistry, orthodontics
