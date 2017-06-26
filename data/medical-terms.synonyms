@@ -1,0 +1,35 @@
+# Medical and healthcare related term synonym
+med => medical
+tech => technology
+
+# Spelling differences
+gynaecology, gynecology
+orthopedic, orthopaedic
+paediatrics, pediatrics
+
+# Profession and Specialty are normalised
+cardiology, cardiologist
+dentistry, dentist
+gynecology, gynecologist
+immunology, immunologist
+neonatology, neonatologist
+nephrology, nephrologist
+neurology, neurologist
+oncology, oncologist
+opthalmology, opthalmologist
+orthodontics, orthodontologist
+paediatrics, paediatrician
+pathology, pathologist
+psychiatry, psychiatrist
+psychology, psychologist
+pulmonology, pulmonologist
+radiology, radiologist
+
+# Common abbreviations and expansions
+gynae => gynecologist
+paeds => paediatrics
+psych => psychiatrist
+
+# Subspecialty are treated equally
+dentistry, orthodontics
+paediatrics, neonatology

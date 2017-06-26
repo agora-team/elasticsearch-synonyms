@@ -30,6 +30,7 @@ The synonym files in `data/` can be used directly in elasticsearch configuration
 
 Following datasets are currently available:
 - `be-ae`: British English and American English Spellings. From [AVKO.org](https://to.noop.pw/2sNor7C).
+- `medical-terms`: A Synonym file with several Medical terminologies, abbreviations and resolution.
 
 ## Installation
 
