@@ -8,6 +8,7 @@ ReportMessage = collections.namedtuple('ReportMessage', ['level', 'msg', 'line_n
 
 
 def print_reports(reports, verbose=False):
+  '''Utility function for rendering SynParser report.'''
   errored = False
   for report in reports:
     if report.level == LEVELS['ok']:
@@ -22,3 +23,11 @@ def print_reports(reports, verbose=False):
   if not errored:
     hues.log('Valid Synonyms', time=False, success=True)
   return errored
+
+
+def validate_report(reports):
+  '''Check if the parser reports any error.'''
+  for report in reports:
+    if report.level == LEVELS['error']:
+      return False
+  return True
