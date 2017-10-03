@@ -1,5 +1,5 @@
 # Medical and healthcare related term synonym
-med => medical
+med => medical, medicine
 tech => technology
 
 # Spelling differences
@@ -8,6 +8,8 @@ orthopedic, orthopaedic
 paediatrics, pediatrics
 haemoglobin, hemoglobin
 haemotocrit, hematocrit
+haemotology, hemotology
+tumour, tumor
 
 # Profession and Specialty are normalised
 cardiology, cardiologist
@@ -31,6 +33,20 @@ radiology, radiologist
 gynae => gynecology
 paeds => paediatrics
 psych => psychiatry
+medtech => medical technology
+med tech => medical technology
+
+# acronyms
+ICU => intensive care unit, intensive care
+PICU => paediatric intensive care unit, paediatric intensive care, pediatric intensive care unit, pediatric intensive care 
+
+# words to be treated as synonyms
+cardiac, cardiology
+cancer, oncology, tumour, tumor, malignancy
+cardiac arrest, heart attack
+malignant, terminal, fatal, deadly
+mental health, mental illness
+atrial fibrillation, atrial fibrilation, AFib, AF, A-fib, arrhythmia, irregular heartbeat 
 
 # Subspecialty are treated equally
 dentistry, orthodontics
