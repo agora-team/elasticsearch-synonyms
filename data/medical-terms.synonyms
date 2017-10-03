@@ -6,6 +6,8 @@ tech => technology
 gynaecology, gynecology
 orthopedic, orthopaedic
 paediatrics, pediatrics
+haemoglobin, hemoglobin
+haemotocrit, hematocrit
 haemotology, hemotology
 tumour, tumor
 
@@ -48,4 +50,45 @@ atrial fibrillation, atrial fibrilation, AFib, AF, A-fib, arrhythmia, irregular 
 
 # Subspecialty are treated equally
 dentistry, orthodontics
-paediatrics, neonatology
+
+# Important to be bring up same results
+diabetes, diabetic
+bioethics, medical ethics, ethical, ethics
+ETOH, alcohol
+neonate, neonates, neonatal
+chronic, longterm, long term, long-term
+
+# Acronyms
+IBS, irritable bowel syndrome
+ADHD, attention deficit hyperactivity disorder
+PTSD, post-traumatic stress disorder, post-traumatic stress syndrome
+AIDS, acquired immune deficiency syndrome
+ADR, adverse drug reaction
+BP, blood pressure
+BPD, borderline personality disorder
+CBC, complete blood count
+COPD, chronic obstructive pulmonary disease
+DNR, do not resuscitate
+DTR, deep tendon reflexes
+DVT, deep vein thrombosis
+ECT, electroconvulsive therapy
+FX, fracture
+HRT, hormone replacement therapy
+HTN, hypertension
+IBD, inflammatory bowel disease
+ICU, intensive care unit
+PICU, paediatric intensive care unit, pediatric intensive care unit
+NICU, neonatal intensive care unit
+K, potassium
+KCL, potassium chloride
+LBP, low back pain
+NA, Na, sodium
+PT, physical therapy
+PTH, parathyroid hormone
+SAD, season affective disorder
+SOB, shortness of breath
+SQ, subcutaneous
+THR, total hip replacement
+TKR, total knee replacement
+URI, upper respiratory infection
+UTI, urinary tract infection
